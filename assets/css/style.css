@@ -591,7 +591,9 @@ position:relative;
 	text-align: center;
 	padding:60px 30px;
 	position:relative;
+	margin-left: 255px;
 }
+
  @media only screen and (max-width:768px){
 .sp {padding:30px;}
  }
