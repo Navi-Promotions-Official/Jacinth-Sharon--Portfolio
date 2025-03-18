@@ -474,6 +474,10 @@ position:relative;
     }
 }
 
+
+
+
+
 /*END SKILL*/
 /*
 * ----------------------------------------------------------------------------------------
@@ -487,81 +491,184 @@ position:relative;
 * 05. START SERVICE CSS STYLE
 * ----------------------------------------------------------------------------------------
 */
- @media only screen and (max-width:768px){
-.service_area{padding-bottom:20px;}
+/* General Responsive Padding */
+@media only screen and (max-width: 768px) {
+    .service_area {
+        padding-bottom: 20px;
+    }
 }
+
+/* Service Box Styling */
 .serviceBox {
-	position: relative;
-	padding: 40px;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #353639; /* Unified border for all sections */
 }
+
+/* Borders */
 .sbbr {
-	border-right: 1px solid #353639;
-	border-bottom: 1px solid #353639;
+    border-right: 1px solid #353639;
+    border-bottom: 1px solid #353639;
 }
- @media only screen and (max-width:768px){
-.sbbr{border-right: 0px;border-left: 0px;border-bottom:0px;}
+
+/* Adjust Borders on Small Screens */
+@media only screen and (max-width: 768px) {
+    .sbbr {
+        border-right: 0;
+        border-bottom: 1px solid #353639;
+    }
 }
-.sbbrnone{
-border-right:0px;
+
+/* Border Removal for Specific Sections */
+/* .sbbrnone {
+    border-right: none;
+} */
+
+.sblr {
+    border-right: 1px solid #353639;
+    border-left: 1px solid #353639;
 }
-.sblr{
-	border-right: 1px solid #353639;
-	border-left: 1px solid #353639;
+
+/* Remove Side Borders on Small Screens */
+@media only screen and (max-width: 768px) {
+    .sblr {
+        border-right: 0;
+        border-left: 0;
+    }
 }
- @media only screen and (max-width:768px){
-.sblr{border-right: 0px;border-left: 0px;}
+
+/* Service Icon */
+.service-icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #f0bb62; /* Default icon color (Blue) */
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.service-icon span {
-	color: #f0bb62;
-	display: inline-block;
-	font-size:50px;
-	margin-bottom: 25px;
-	-webkit-transition: all 0.5s ease 0s;
-	-o-transition: all 0.5s ease 0s;
-	transition: all 0.5s ease 0s;
+
+/* Hover Effect */
+.serviceBox:hover .service-icon {
+    color: #f0bb62; /* Change color on hover */
+    transform: scale(1.2); /* Slightly increase size */
 }
-.serviceBox:hover .service-icon{
-    -webkit-animation: 0.3s ease 0s normal forwards 1 running loading;
-            animation: 0.3s ease 0s normal forwards 1 running loading;
-	color: #f0bb62;
+
+/* Responsive Icon Size */
+@media (max-width: 768px) {
+    .service-icon {
+        font-size: 35px;
+    }
 }
+
+@media (max-width: 480px) {
+    .service-icon {
+        font-size: 30px;
+    }
+}
+
+
+/* Service Title */
 .serviceBox .title {
-	font-size: 20px;
-	font-weight: 700;
-	margin: 0 0 15px;
-	text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    text-transform: capitalize;
 }
-.serviceBox .service-no{
+
+/* Service Number */
+.serviceBox .service-no {
     display: inline-block;
     float: right;
     font-size: 32px;
     color: #ddd;
     line-height: 20px;
 }
-.serviceBox .description{
+
+/* Service Description */
+.serviceBox .description {
     margin: 0;
 }
-@-webkit-keyframes loading{
-    49%{ -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-    50%{
+
+/* Filter Menu */
+.filter-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Filter Menu Items */
+.filter-menu li {
+    cursor: pointer;
+    padding: 8px 16px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Separator between items */
+.filter-menu li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    color: gray;
+}
+
+/* Hover and Active State */
+.filter-menu li:hover,
+.filter-menu li.active {
+    color: #f4c23d; /* Golden highlight */
+    font-weight: bold;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 1024px) {
+    .portfolio-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Hover Animation */
+@-webkit-keyframes loading {
+    49% { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+    50% {
         opacity: 0;
         -webkit-transform: translateY(100%);
-                transform: translateY(100%);
+        transform: translateY(100%);
     }
-    51%{ opacity: 1; }
+    51% { opacity: 1; }
 }
-@keyframes loading{
-    49%{ -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-    50%{
+
+@keyframes loading {
+    49% { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+    50% {
         opacity: 0;
         -webkit-transform: translateY(100%);
-                transform: translateY(100%);
+        transform: translateY(100%);
     }
-    51%{ opacity: 1; }
+    51% { opacity: 1; }
 }
-@media only screen and (max-width:990px){
-    .serviceBox{ margin-bottom: 40px; }
+
+/* Margin Adjustment for Smaller Screens */
+@media only screen and (max-width: 990px) {
+    .serviceBox {
+        margin-bottom: 40px;
+    }
 }
+
 /*
 * ----------------------------------------------------------------------------------------
 * 05. END SERVICE CSS STYLE

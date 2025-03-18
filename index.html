@@ -16,6 +16,7 @@
 		<!-- Google Font -->
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<!-- Font Awesome CSS -->
 		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/fonts/themify-icons.css">
@@ -36,6 +37,14 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<!-- jQuery (Required for Magnific Popup) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 </head>
 <body>
 
@@ -161,56 +170,102 @@
 	<!-- START SERVICE -->
 	<section id="service" class="service_area section-padding">
 		<div class="container">
-			 <div class="section-title text-center">
-				 <h1>My Skills</h1>
-				 <!-- <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p> -->
-			 </div>
-			 <div class="row text-center">					
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-					 <div class="serviceBox sbbr">
-						 <div class="service-icon"><span class="ti-world"></span></div>
-						 <h3 class="title">Web Development</h3>
-						 <p class="description">Skilled in HTML, CSS, JavaScript, and responsive design using Bootstrap & Figma.</p>
-					 </div>
-				 </div><!-- END COL -->			
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-					 <div class="serviceBox sbbr">
-						 <div class="service-icon"><span class="ti-server"></span></div>
-						 <h3 class="title">Backend Development</h3>
-						 <p class="description">Experience with Node.js, Express.js, MongoDB, and API development.</p>
-					 </div>
-				 </div><!-- END COL -->			
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-					 <div class="serviceBox sbbr sbbrnone">
-						 <div class="service-icon"><span class="ti-settings"></span></div>
-						 <h3 class="title">Software Testing</h3>
-						 <p class="description">Certified in software testing from NPTEL, familiar with testing strategies and debugging.</p>
-					 </div>
-				 </div><!-- END COL -->			
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0">
-					 <div class="serviceBox">
-						 <div class="service-icon"><span class="ti-pencil-alt"></span></div>
-						 <h3 class="title">Content Writing</h3>
-						 <p class="description">Experience in technical blogging, writing for ParkQwik’s blog, and documentation.</p>
-					 </div>
-				 </div><!-- END COL -->			
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
-					 <div class="serviceBox sblr">
-						 <div class="service-icon"><span class="ti-light-bulb"></span></div>
-						 <h3 class="title">UI/UX Design</h3>
-						 <p class="description">Proficient in Figma and Canva for designing user-friendly web interfaces.</p>
-					 </div>
-				 </div><!-- END COL -->		
-				 <div class="col-lg-4 col-sm-6 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" data-wow-offset="0">
-					 <div class="serviceBox">
-						 <div class="service-icon"><span class="ti-github"></span></div>
-						 <h3 class="title">Version Control</h3>
-						 <p class="description">Experienced in Git & GitHub for collaborative development and project management.</p>
-					 </div>
-				 </div><!-- END COL -->				
-			 </div><!-- END ROW -->			
-		 </div><!-- END CONTAINER -->
-	 </section>
+			<div class="section-title text-center">
+				<h1>My Skills</h1>
+			</div>
+	
+			<!-- Filter Menu in Row -->
+			<div class="row justify-content-center">
+				<div class="col-lg-12 text-center">
+					<ul class="filter-menu">
+						<li class="filter active" data-filter="all">All</li>
+						<li class="filter" data-filter=".frontend">Frontend</li>
+						<li class="filter" data-filter=".backend">Backend</li>
+						<li class="filter" data-filter=".db">Database</li>
+						<li class="filter" data-filter=".tools">Tools</li>
+					</ul>
+				</div>
+			</div>
+	
+			<!-- Skills Content -->
+			<div class="row text-center portfolio-content">
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix frontend">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fab fa-html5"></i></div>
+						<h3 class="title">HTML</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix frontend">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fab fa-css3-alt"></i></div>
+						<h3 class="title">CSS</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix tools">
+					<div class="serviceBox sbbr sbbrnone">
+						<div class="service-icon"><i class="fab fa-github"></i></div>
+						<h3 class="title">Github</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix tools">
+					<div class="serviceBox">
+						<div class="service-icon"><i class="fa fa-pencil-alt"></i></div>
+						<h3 class="title">Figma</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix frontend">
+					<div class="serviceBox sblr">
+						<div class="service-icon"><i class="fab fa-js"></i></div>
+						<h3 class="title">Javascript</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix tools">
+					<div class="serviceBox">
+						<div class="service-icon"><i class="fa fa-paint-brush"></i></div>
+						<h3 class="title">Canva</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix backend">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fab fa-node-js"></i></div>
+						<h3 class="title">Node.js</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix backend">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fa fa-server"></i></div>
+						<h3 class="title">Express.js</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix backend">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fab fa-python"></i></div>
+						<h3 class="title">Python</h3>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 col-sm-6 col-xs-12 no-padding mix db">
+					<div class="serviceBox sbbr">
+						<div class="service-icon"><i class="fas fa-database"></i></div>
+						<h3 class="title">MongoDB</h3>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	
+				
+				
+	
 	<!-- END SERVICE -->	
 
 	<!-- START FUNFACT -->
@@ -252,11 +307,10 @@
 		<div class="container">
 			<div class="section-title text-center">
 				<h1>The projects</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>			
 			<div class="row portfolio_item">										
 				<div class="col-lg-12 text-center">
-					<div class="portfolio_filter">
+					<!-- <div class="portfolio_filter">
 						<ul>
 							<li class="active filter" data-filter="all">All</li>
 							<li class="filter" data-filter=".design">Design</li>
@@ -267,9 +321,9 @@
 							<li class="filter" data-filter=".web">Web Details</li>
 							<li class="filter" data-filter=".video">Video</li>
 						</ul>
-					</div>
+					</div> -->
 				</div><!--END COL -->				
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix print marketing">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/1.jpg" alt="">
 						<div class="box-content">
@@ -282,7 +336,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix web">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/2.jpg" alt="">
 						<div class="box-content">
@@ -295,7 +349,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix logo">		
+				<div class="col-xs-12 col-sm-6 col-lg-4">		
 					<div class="box">
 						<img src="assets/img/portfolio/3.jpg" alt="">
 						<div class="box-content">
@@ -308,7 +362,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix design web">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/4.jpg" alt="">
 						<div class="box-content">
@@ -321,7 +375,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix print video">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/5.jpg" alt="">
 						<div class="box-content">
@@ -334,7 +388,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix logo marketing">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/6.jpg" alt="">
 						<div class="box-content">
@@ -347,7 +401,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->	
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix design media">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/7.jpg" alt="">
 						<div class="box-content">
@@ -360,7 +414,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix video">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/8.jpg" alt="">
 						<div class="box-content">
@@ -373,7 +427,7 @@
 						</ul>
 					</div>
 				</div><!--- END COL -->
-				<div class="col-xs-12 col-sm-6 col-lg-4 mix logo media">		
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">		
 					<div class="box">
 						<img src="assets/img/portfolio/9.jpg" alt="">
 						<div class="box-content">
@@ -417,7 +471,7 @@
 						<h4>College</h4>
 						<span class="active_year">2025</span>
 						<span class="active_company">- NSCET College </span>
-						<p>Pursuing final year Computer Science Engineering with a CGPA of 8.078 up to the 6th semester</p>
+						<p>Pursuing final year Computer Science Engineering with a <br/>CGPA of 8.078 up to the 6th semester</p>
 					</div>						
 				</div><!--END COL -->
 				<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
@@ -587,7 +641,6 @@
 		<div class="container">
 		<div class="section-title text-center">
 			<h1>Write Your Message</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>				
 			<div class="row">
 				<div class="col-lg-8 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
@@ -710,6 +763,27 @@
 			magicMouse(options);
             
 		</script>	
+	<!-- jQuery Script for Filtering -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".filter").click(function () {
+			$(".filter").removeClass("active");
+			$(this).addClass("active");
+	
+			let filterValue = $(this).attr("data-filter");
+			if (filterValue === "all") {
+				$(".mix").show(); // Show all elements
+			} else {
+				$(".mix").hide();
+				$(filterValue).show(); // Show only selected category
+			}
+		});
+	
+		// Show all by default
+		$(".mix").show();
+	});
+	</script>
 	
 </body>
 </html>
