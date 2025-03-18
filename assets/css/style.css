@@ -949,7 +949,6 @@ position:relative;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	border-radius: 30px;
-	font-weight: ;
 }
  .box .icon li a:hover{
      color: #fff;
@@ -960,6 +959,124 @@ position:relative;
      .box{ margin: 0 0 30px; }
  }
 
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1d1d1d;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* Ensures side-by-side layout on larger screens */
+    gap: 20px;
+    max-width: 700px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.modal-body img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.modal-info {
+    width: 50%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ensure modal info text is readable */
+.modal-info p {
+    margin-bottom: 10px;
+}
+
+/* Style the URL to be fully responsive */
+.modal-info a {
+    display: inline-block;
+    word-break: break-word;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 85%; /* Wider modal for mobile */
+        max-width: 450px;
+        padding: 15px;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+    
+    .modal-body {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+    }
+
+    .modal-body img {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .modal-info {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .modal-info a {
+        display: block; /* Allows proper wrapping */
+        white-space: normal; /* Allows breaking on smaller screens */
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .modal-body img {
+        max-height: 200px;
+    }
+
+    .modal-info {
+        font-size: 13px;
+    }
+
+    .modal-info a {
+        font-size: 13px;
+        word-break: break-word;
+        white-space: normal; /* Ensures the URL wraps properly */
+    }
+}
+
+    
  /*START PORTFOLIO SINGLE PAGE DESIGN*/
 
 
