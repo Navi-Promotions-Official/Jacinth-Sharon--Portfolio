@@ -398,7 +398,8 @@ position:relative;
  @media only screen and (max-width:768px){
 .about_img {margin-bottom:60px;}
  }
-.about_info{}
+.about_info{
+}
 .about_info h4, .skills_info h4 {
 	margin-bottom: 30px;
 	text-transform: uppercase;
@@ -626,6 +627,31 @@ position:relative;
     font-weight: bold;
 }
 
+
+@media (max-width: 768px) {
+    .filter-menu {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .filter-menu li {
+        width: 80%; /* Full-width for touch-friendly UI */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-menu {
+        gap: 8px;
+    }
+
+    .filter-menu li {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
 /* Responsive Grid Layout */
 @media (max-width: 1024px) {
     .portfolio-content {
