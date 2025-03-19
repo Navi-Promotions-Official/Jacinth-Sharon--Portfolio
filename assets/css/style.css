@@ -158,7 +158,7 @@ b, strong {
 /*END SECTION TITLE DESIGN*/
 /*START SCROLL TO TOP*/
 .topcontrol {
-background: #01586c none repeat scroll 0 0;
+background: #595bcf none repeat scroll 0 0;
 border-radius: 30px;
 bottom: 5px;
 -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
@@ -330,7 +330,7 @@ color:#fff;
 * ----------------------------------------------------------------------------------------
 */
 .home_bg{
-height:620px;
+height:700px;
 position:relative;
 }
 .home_bg::before {
@@ -394,7 +394,9 @@ position:relative;
 * ----------------------------------------------------------------------------------------
 */
 .about_img{}
-.about_img img{width:100%;}
+.about_img img{
+    width:90%;
+}
  @media only screen and (max-width:768px){
 .about_img {margin-bottom:60px;}
  }
@@ -437,7 +439,7 @@ position:relative;
 	width: 100%;
 }
 .progress-bar > span {
-    background: #01586c none repeat scroll 0 0;
+    background: #595bcf none repeat scroll 0 0;
     display: block;
     height: 100%;
     width: 0;
@@ -447,7 +449,7 @@ position:relative;
 
 .download-btn {
     display: inline-block;
-    background-color:#01586c; /* Primary blue color */
+    background-color:#595bcf; /* Primary blue color */
     color: #fff; /* White text */
     font-size: 16px;
     font-weight: bold;
@@ -460,7 +462,7 @@ position:relative;
 }
 
 .download-btn:hover {
-    background-color: #01586c; /* Darker blue on hover */
+    background-color: #595bcf; /* Darker blue on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -545,7 +547,7 @@ position:relative;
 /* Service Icon */
 .service-icon {
     font-size: 40px; /* Adjust icon size */
-    color: #01586c
+    color: #595bcf
 	; /* Default icon color (Blue) */
     margin-bottom: 15px;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -553,7 +555,7 @@ position:relative;
 
 /* Hover Effect */
 .serviceBox:hover .service-icon {
-    color: #01586c; /* Change color on hover */
+    color: #595bcf; /* Change color on hover */
     transform: scale(1.2); /* Slightly increase size */
 }
 
@@ -624,7 +626,7 @@ position:relative;
 /* Hover and Active State */
 .filter-menu li:hover,
 .filter-menu li.active {
-    color: #01586c; /* Golden highlight */
+    color: #595bcf; /* Golden highlight */
     font-weight: bold;
 }
 
@@ -789,7 +791,7 @@ position:relative;
  }
 .sp h2 {
 	font-size: 60px;
-	color:#01586c;
+	color:#595bcf;
 	font-weight: 600;
      
 }
@@ -843,7 +845,7 @@ position:relative;
 	border-right: 0px;
 }
 .portfolio_filter .active {
-	color: #01586c;
+	color: #595bcf;
 	opacity: 1;
 }
 .box{
@@ -952,8 +954,8 @@ position:relative;
 }
  .box .icon li a:hover{
      color: #fff;
-     background:#01586c;
-	 border: 2px solid #01586c;
+     background:#595bcf;
+	 border: 2px solid #595bcf;
  }
  @media only screen and (max-width:990px){
      .box{ margin: 0 0 30px; }
@@ -1016,12 +1018,12 @@ position:relative;
     font-weight: normal;
 }
 .modal-content h2 {
-    color: #01586c; /* Change this color for "Date:" and "Project URL:" */
+    color: #595bcf; /* Change this color for "Date:" and "Project URL:" */
     font-weight: bold;
 }
 /* Change the color of strong (bold) text inside the paragraph */
 .modal-content p strong {
-    color: #01586c; /* Change this color for "Date:" and "Project URL:" */
+    color: #595bcf; /* Change this color for "Date:" and "Project URL:" */
 }
 
 
@@ -1124,11 +1126,11 @@ width: 600px;
 }
 .about_project_details ul li { padding: 5px 0 }
 .about_project_details ul li i {
-    color: #01586c;
+    color: #595bcf;
     margin-right: 10px;
 }
 .about_project_details ul li a {
-    color: #01586c;
+    color: #595bcf;
     font-weight: 700;
 }
 .about_project_details ul li a:hover {text-decoration: underline;}
@@ -1138,7 +1140,7 @@ width: 600px;
 	padding-bottom: 4px;
 	transition: 0.3s;
 }
-.sp_btn:hover{color: #01586c;}
+.sp_btn:hover{color: #595bcf;}
 /*END PORTFOLIO SINGLE PAGE DESIGN*/
 /*
 * ----------------------------------------------------------------------------------------
@@ -1191,7 +1193,7 @@ width: 600px;
 .active_year {
 	color: #fff;
 	font-weight: 500;
-	border: 2px solid #01586c;
+	border: 2px solid #595bcf;
 	padding: 0px 10px;
 	border-radius: 2px;
 }
@@ -1199,6 +1201,38 @@ width: 600px;
 	font-weight: 500;
 }
 .single_timeline p{}
+
+.resume_area {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Space between columns */
+    gap: 20px; /* Space between boxes */
+    padding-bottom: 50px;
+    align-items: stretch; /* Ensure all boxes stretch equally */
+}
+.resume-card {
+    background: #222; /* Dark box */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    flex: 1; /* Equal width for all boxes */
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Set a larger min-height */
+    height: 100%; /* Ensures all cards take full height */
+}
+
+/* Fix content alignment issue */
+.resume-card .single_timeline {
+    flex-grow: 1; /* Ensures content fills the box */
+}
+
+/* Hover Effect */
+.resume-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 20px rgba(96, 52, 192, 0.7);
+}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 08. END RESUME PAGE DESIGN
@@ -1333,7 +1367,7 @@ color: #fff;
 	position: absolute;
 	left: 8%;
 	top: 80%;
-	background: #01586c;
+	background: #595bcf;
 	padding: 6px 15px;
 	border-radius: 4px;
 	color: #fff;
@@ -1356,7 +1390,7 @@ color: #fff;
 	font-weight: 600;
 }
 .single_blog p{margin-bottom:20px;}
-.single_blog h2 a:hover{color:#01586c;}
+.single_blog h2 a:hover{color:#595bcf;}
 .single_blog span {
 	text-transform: capitalize;
 	margin-bottom: 15px;
@@ -1374,10 +1408,10 @@ color: #fff;
 	font-size: 12px;
 }
 }
-.single_blog span a{color:#01586c;}
+.single_blog span a{color:#595bcf;}
 .single_blog > a{margin-bottom: 30px;}
 .blog_content a {
-	color: #01586c;
+	color: #595bcf;
 	font-weight: 500;
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
@@ -1445,7 +1479,7 @@ margin-bottom:40px;
 	margin-bottom:30px;
 }
 .contact input:focus {
-	border: 1px solid #01586c;
+	border: 1px solid #595bcf;
     -webkit-box-shadow: none;
             box-shadow: none;
     outline: 0 none;
@@ -1453,7 +1487,7 @@ margin-bottom:40px;
 	background:none;
 }
 .contact textarea:focus {
-border: 1px solid #01586c;
+border: 1px solid #595bcf;
     -webkit-box-shadow: none;
             box-shadow: none;
 	color: #fff;
@@ -1487,7 +1521,7 @@ border: 1px solid #01586c;
 float:left;
 }
 .single_address span {
-	color: #01586c;
+	color: #595bcf;
 	font-size: 30px;
 	margin-bottom: 20px;
 	display: block;
@@ -1509,7 +1543,7 @@ float:left;
 	-o-transition: 0.3s;
 	transition: 0.3s;
 }
-.contact_btn:hover{background:#01586c;color: #fff;}
+.contact_btn:hover{background:#595bcf;color: #fff;}
 
 
 .map{}
