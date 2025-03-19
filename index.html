@@ -315,7 +315,7 @@
 				<div class="col-xs-12 col-sm-6 col-lg-4">
 					<div class="box">
 						<img src="assets/img/portfolio/1.jpg" alt="Landing Page"
-							 onclick="showModal('assets/img/portfolio/1.jpg', 'EcoTrack is a full-stack web portal designed to monitor and encourage behavior change for sustainability. It was the winning project in Smart India Hackathon 2023 under the Ministry of Environment, featuring real-time tracking, analytics, and insights to promote eco-friendly practices.', '12/23 -12/23', 'https://github.com/Jacinthsharon/EcoTrack')">
+							 onclick="showModal('assets/img/portfolio/1.jpg', 'EcoTrack','EcoTrack is a full-stack web portal designed to monitor and encourage behavior change for sustainability. It was the winning project in Smart India Hackathon 2023 under the Ministry of Environment, featuring real-time tracking, analytics, and insights to promote eco-friendly practices.', '12/23 -12/23', 'https://github.com/Jacinthsharon/EcoTrack')">
 							 <div class="box-content">
 								<h3 class="title">EcoTrack </h3>
 								<span class="post">Web Design</span>
@@ -325,7 +325,7 @@
 				<div class="col-xs-12 col-sm-6 col-lg-4">
 					<div class="box">
 						<img src="assets/img/portfolio/2.jpg" alt="E-commerce Website"
-							 onclick="showModal('assets/img/portfolio/2.jpg', 'Resume Upload System is a web-based solution that enables users to submit resumes via email and WhatsApp using Twilio integration. It streamlines the hiring process by automating resume collection and submission.', '7/24 - 7/24', 'https://github.com/Jacinthsharon/Resume_Upload_System')">
+							 onclick="showModal('assets/img/portfolio/2.jpg','Resume Upload System', 'Resume Upload System is a web-based solution that enables users to submit resumes via email and WhatsApp using Twilio integration. It streamlines the hiring process by automating resume collection and submission.', '7/24 - 7/24', 'https://github.com/Jacinthsharon/Resume_Upload_System')">
 							 <div class="box-content">
 								<h3 class="title">Resume Upload System</h3>
 								<span class="post">Web Design</span>
@@ -335,7 +335,7 @@
 				<div class="col-xs-12 col-sm-6 col-lg-4">
 					<div class="box">
 						<img src="assets/img/portfolio/3.jpg" alt="Mobile App UI"
-							 onclick="showModal('assets/img/portfolio/3.jpg', 'Recipe Manager is a CRUD-based web portal built with MySQL for storing, organizing, and managing recipes. It enables users to add, edit, delete, and view recipes efficiently.', '1/25 - 1/25', 'https://github.com/Jacinthsharon/FitTrack')">
+							 onclick="showModal('assets/img/portfolio/3.jpg', 'Recipe Manager','Recipe Manager is a CRUD-based web portal built with MySQL for storing, organizing, and managing recipes. It enables users to add, edit, delete, and view recipes efficiently.', '1/25 - 1/25', 'https://github.com/Jacinthsharon/FitTrack')">
 							 <div class="box-content">
 								<h3 class="title">FitTrack</h3>
 								<span class="post">Web Design</span>
@@ -349,7 +349,7 @@
 				<div class="col-xs-12 col-sm-6 col-lg-4">
 					<div class="box">
 						<img src="assets/img/portfolio/4.jpg" alt="Dashboard Design"
-							 onclick="showModal('assets/img/portfolio/4.jpg', 'FitTrack is a MERN stack-based CRUD application designed to efficiently monitor and manage workout-related tasks. It allows users to track exercises, set goals, and maintain fitness progress seamlessly.', '11/24 - 11/24', 'https://github.com/Jacinthsharon/Blog-Website')">
+							 onclick="showModal('assets/img/portfolio/4.jpg','FitTrack' ,'FitTrack is a MERN stack-based CRUD application designed to efficiently monitor and manage workout-related tasks. It allows users to track exercises, set goals, and maintain fitness progress seamlessly.', '11/24 - 11/24', 'https://github.com/Jacinthsharon/Blog-Website')">
 							 <div class="box-content">
 								<h3 class="title">Blog Website</h3>
 								<span class="post">Web Design</span>
@@ -359,7 +359,7 @@
 				<div class="col-xs-12 col-sm-6 col-lg-4">
 					<div class="box">
 						<img src="assets/img/portfolio/5.jpg" alt="AI Chatbot"
-							 onclick="showModal('assets/img/portfolio/5.jpg', 'Blog Website is a MERN stack-based platform that allows users to create, read, update, and delete blog posts. It provides a seamless writing and publishing experience with a dynamic user interface.', '6/24 - 6/24', 'https://github.com/Jacinthsharon/Recipe-Manager')">
+							 onclick="showModal('assets/img/portfolio/5.jpg','Blog Website', 'Blog Website is a MERN stack-based platform that allows users to create, read, update, and delete blog posts. It provides a seamless writing and publishing experience with a dynamic user interface.', '6/24 - 6/24', 'https://github.com/Jacinthsharon/Recipe-Manager')">
 							 <div class="box-content">
 								<h3 class="title">Recipe Manager</h3>
 								<span class="post">Web Design</span>
@@ -386,6 +386,7 @@
 				<div class="modal-body">
 					<img id="modalImage">
 					<div class="modal-info">
+						<h2 id="modalTitle"></h2>
 						<p id="modalDescription"></p>
 						<p><strong>Date:</strong> <span id="modalDate"></span></p>
 						<p><strong>Project URL:</strong> <a id="modalUrl" target="_blank"></a></p>
@@ -398,8 +399,9 @@
 
 		<!-- JavaScript -->
 		<script>
-			function showModal(imageSrc, description, date, projectUrl) {
+			function showModal(imageSrc,title, description, date, projectUrl) {
 			document.getElementById('modalImage').src = imageSrc;
+			document.getElementById('modalTitle').innerText = title; // Set Title
 			document.getElementById('modalDescription').innerText = description;
 			document.getElementById('modalDate').innerText = date;
 			document.getElementById('modalUrl').innerText = projectUrl;

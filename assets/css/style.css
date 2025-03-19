@@ -974,7 +974,7 @@ position:relative;
 }
 
 .modal-content {
-    background: #1d1d1d;
+    background: black;
     padding: 20px;
     width: 100%;
     color: white;
@@ -983,7 +983,8 @@ position:relative;
     display: flex;
     flex-direction: row; /* Ensures side-by-side layout on larger screens */
     gap: 20px;
-    max-width: 700px;
+    max-width: 1500px;
+    max-height: 850px;
 }
 
 .modal-body {
@@ -1008,17 +1009,32 @@ position:relative;
     margin-bottom: 10px;
 }
 
+/* Change the color of all paragraph text inside the modal */
+.modal-content p {
+    color: #ffffff; /* Change this to any color you prefer */
+    font-size: 16px;
+    font-weight: normal;
+}
+.modal-content h2 {
+    color: #01586c; /* Change this color for "Date:" and "Project URL:" */
+    font-weight: bold;
+}
+/* Change the color of strong (bold) text inside the paragraph */
+.modal-content p strong {
+    color: #01586c; /* Change this color for "Date:" and "Project URL:" */
+}
+
+
 /* Style the URL to be fully responsive */
 .modal-info a {
     display: inline-block;
     word-break: break-word;
-    color: #007bff;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom:-7px;
 }
 
 /* Responsive Design for Medium Screens */
