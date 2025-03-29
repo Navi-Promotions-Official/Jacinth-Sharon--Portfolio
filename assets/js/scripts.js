@@ -106,4 +106,9 @@ Version      : 1.0
 
 
   
+$(document).ready(function () {
+    $(".nav-item .nav-link").click(function () {
+        $(".navbar-collapse").collapse("hide");
+    });
+});
 
